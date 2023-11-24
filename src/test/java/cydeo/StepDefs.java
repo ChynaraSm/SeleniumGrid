@@ -22,13 +22,13 @@ public class StepDefs {
     public void i_am_on_the_home_page() throws Throwable {
         Driver.getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Driver.getDriver().manage().window().maximize();
-        Driver.getDriver().get("http://etsy.com");
+        Driver.getDriver().get("http://www.google.com");
 
     }
 
     @When("^I search for \"([^\"]*)\"$")
     public void i_search_for(String search) throws Throwable {
-        Driver.getDriver().findElement(By.cssSelector("[id*='search-query']")).sendKeys(search + Keys.ENTER);
+        Driver.getDriver().findElement(By.cssSelector("textarea[data-ved*='UDCAY']")).sendKeys(search + Keys.ENTER);
     }
 
     @Then("^I should see the results$")
